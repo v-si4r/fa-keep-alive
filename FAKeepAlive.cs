@@ -17,8 +17,6 @@ namespace fa_keep_alive_test
         {
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
 
-            var websites = new List<Website>();
-
             var config = new ConfigurationBuilder()
                .SetBasePath(context.FunctionAppDirectory)
                .AddJsonFile("local.settings.json", optional: true, reloadOnChange: true)
@@ -49,13 +47,7 @@ namespace fa_keep_alive_test
                 }
 
                 url = config.GetSection($"Websites:Urls:{++i}").Value;
-            }       
-
-        }
-
-        private struct Website
-        {
-            string Url { get; set; }
-        }
+            }      
+        }      
     }
 }
