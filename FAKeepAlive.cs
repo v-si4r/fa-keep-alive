@@ -24,7 +24,7 @@ namespace fa_keep_alive_test
                .Build();
 
             int i = 0;
-            string url = config.GetSection($"Websites:Urls:{i}").Value;
+            string url = config.GetSection($"Websites:{i}").Value;
 
             while (url != null)
             {
@@ -46,7 +46,7 @@ namespace fa_keep_alive_test
                     }
                 }
 
-                url = config.GetSection($"Websites:Urls:{++i}").Value;
+                url = config.GetSection($"Websites:{++i}").Value;
             }      
         }      
     }
