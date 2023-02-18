@@ -3,7 +3,12 @@
   "Values": {
     "AzureWebJobsStorage": "UseDevelopmentStorage=true;",
     "FUNCTIONS_WORKER_RUNTIME": "dotnet",
-    "ScheduleExpression": "0 */1 * * * *",
-    "Websites": ""
+    "ScheduleExpression": "0 */1 * * * *"
+  },
+  "Websites": {
+    "Urls": [
+      "https://www.google.com/",
+      "https://v-si4r.github.io/"
+    ]
   }
 }
